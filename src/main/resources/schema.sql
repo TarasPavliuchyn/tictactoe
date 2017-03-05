@@ -1,0 +1,22 @@
+SET FOREIGN_KEY_CHECKS=0;
+
+DROP TABLE IF EXISTS game;
+CREATE TABLE game (
+  game_id INT NOT NULL AUTO_INCREMENT,
+  game_name VARCHAR(100) NOT NULL,
+  status VARCHAR(20) NOT NULL,
+  game_created_date TIMESTAMP NOT NULL,
+  PRIMARY KEY (game_id));
+
+
+ DROP TABLE IF EXISTS mark;
+ CREATE TABLE mark (
+   mark_id INT NOT NULL AUTO_INCREMENT,
+   game_id INT NOT NULL,
+   cell_number INT NOT NULL,
+   player VARCHAR(20) NOT NULL,
+   mark_created_date TIMESTAMP NOT NULL,
+   PRIMARY KEY (mark_id),
+   CONSTRAINT fk_game_id FOREIGN KEY (game_id) REFERENCES game (game_id) ON DELETE CASCADE);
+
+SET FOREIGN_KEY_CHECKS=1;

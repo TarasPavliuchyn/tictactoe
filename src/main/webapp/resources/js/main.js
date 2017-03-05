@@ -7,8 +7,6 @@ function init() {
     squares[s].addEventListener('click', function(evt){squareSelected(evt, getCurrentPlayer());}, false);
   }
 
-  clearGrid();
-
   var playerX = document.getElementById("X");
   var playerO = document.getElementById("O");
   playerX.className = "current-player";

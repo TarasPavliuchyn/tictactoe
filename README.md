@@ -2,7 +2,7 @@
                                  TicTacToe                                    ||
 ==============================================================================||
 Project on github:
-https://git.epam.com/taras_pavliuchyn/movietheater.git
+https://github.com/TarasPavliuchyn/tictactoe.git
 ===============================================================================
 Needed environments:
 1) Maven
